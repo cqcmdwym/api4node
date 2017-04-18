@@ -8,6 +8,7 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 var bookRouter = express.Router();
+
 bookRouter.route('/Books')
     .get(function(req,res){
         var query = {};
@@ -24,6 +25,19 @@ bookRouter.route('/Books')
             }
         });
     });
+
+bookRouter.route('/Books/:bookId')
+    .get(function(req,res){
+        Book.findById(req.params.bookId,function(err,books){
+            if(err){
+                res.status(500).send(err);
+            }
+            else{
+                res.json(books);
+            }
+        });
+    });
+
 
 app.use('/api', bookRouter);
 
