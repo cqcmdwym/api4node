@@ -1,0 +1,22 @@
+{
+  "name": "api4node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cqcmdwym/api4node.git"
+  },
+  "author": "cqcmdwym",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cqcmdwym/api4node/issues"
+  },
+  "homepage": "https://github.com/cqcmdwym/api4node#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
