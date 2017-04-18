@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/cqcmdwym/api4node#readme",
   "dependencies": {
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "gulp": "^3.9.1",
+    "mongoose": "^4.9.5"
+  },
+  "devDependencies": {
+    "gulp-nodemon": "^2.2.1"
   }
 }
