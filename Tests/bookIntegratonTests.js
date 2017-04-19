@@ -1,8 +1,7 @@
 var should = require('should');
 var request = require('supertest');
 var app = require('../app.js');
-var mongoose = require('mongoose');
-var Book = mongoose.model('Book'); 
+var Book = require('../models/bookModel');
 var agent = request.agent(app);
 
 describe('Book Crud Test', function(){
