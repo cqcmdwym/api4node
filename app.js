@@ -3,7 +3,14 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var Book = require('./models/bookModel');
 
-var db = mongoose.connect('mongodb://localhost/bookAPI');
+var db;
+
+if(process.env.ENV =='Test'){
+    db = mongoose.connect('mongodb://localhost/bookAPI_test');
+}
+else{
+    db = mongoose.connect('mongodb://localhost/bookAPI');
+}
 
 var app = express();
 
@@ -23,3 +30,5 @@ app.get('/', function(req, res){
 app.listen(port, function(){
     console.log('Running on PORT: ' + port);
 });
+
+module.exports = app;
